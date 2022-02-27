@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Lucky
+{% endblock %}
+
+{% block body %}
+    {% set length = titles | length%}
+    {% set i = range(0, length) | random %}
+    <div class="resultl">
+        <p class="titlel"><b>{{titles[i]}}</b> {{years[i]}} | <b>{{ratings[i]}}</b></p>
+        <p>{{certificates[i]}} | {{runtimes[i]}} | {{genres[i]}}</p>
+        <p>{{storylines[i]}}</p>
+        <p>Stars: {{stars[i]}}</p>
+    </div>
+{% endblock %}

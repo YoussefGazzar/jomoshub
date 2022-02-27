@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block body %}
+    {% for i in range(titles | length) %}
+        <div class="result">
+            <p class="title"><b>{{i+1}}. {{titles[i]}}</b> {{years[i]}} | <b>{{ratings[i]}}</b></p>
+            <p>{{certificates[i]}} | {{runtimes[i]}} | {{genres[i]}}</p>
+            <p>{{storylines[i]}}</p>
+            <p>Stars: {{stars[i]}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

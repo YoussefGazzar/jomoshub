@@ -1,0 +1,152 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    hub
+{% endblock %}
+
+{% block body %}
+    <form action="/" method="post">
+        <div class="leftside">  
+            <div class="label">
+                  <h3>Title Type</h3>
+            </div>
+            <div class="inputs">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><input id="title_type-2" type="checkbox" name="title_type" value="feature,tv_movie,short"> <label for="title_type-2">Movie</label></td>
+                            <td><input id="title_type-3" type="checkbox" name="title_type" value="tv_series,tv_miniseries"> <label for="title_type-3">Series</label></td>
+                            <td><input id="title_type-7" type="checkbox" name="title_type" value="documentary"> <label for="title_type-7">Documentary</label></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="clause">
+                <div class="label">
+                    <h3>Genres</h3>
+                </div>
+                <div class="inputs">
+                    <table>
+                        <tbody>
+                            <tr>
+                                {% for i in range(4) %}
+                                    <td><input id="genres-{{i+1}}" type="checkbox" name="genres" value="{{genres[i]}}"> <label for="genres-{{i+1}}">{{genres[i]}}</label></td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                {% for i in range(4, 8) %}
+                                    <td><input id="genres-{{i+1}}" type="checkbox" name="genres" value="{{genres[i]}}"> <label for="genres-{{i+1}}">{{genres[i]}}</label></td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                {% for i in range(8, 12) %}
+                                    <td><input id="genres-{{i+1}}" type="checkbox" name="genres" value="{{genres[i]}}"> <label for="genres-{{i+1}}">{{genres[i]}}</label></td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                
+                                <td><input id="genres-13" type="checkbox" name="genres" value="musical,music"> <label for="genres-13">Musical</label></td>
+                                {% for i in range(13, 16) %}
+                                    <td><input id="genres-{{i+1}}" type="checkbox" name="genres" value="{{genres[i]}}"> <label for="genres-{{i+1}}">{{genres[i]}}</label></td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                {% for i in range(16, 20) %}
+                                    <td><input id="genres-{{i+1}}" type="checkbox" name="genres" value="{{genres[i]}}"> <label for="genres-{{i+1}}">{{genres[i]}}</label></td>
+                                {% endfor %}
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>    
+        <div class="rightside">    
+            <div class="date">
+                <div class="label">
+                    <h3>Release Date</h3>
+                </div>
+                <div class="inputs">
+                    <select name="release_date-min">
+                        <option value="" selected>-</option>
+                        {% for i in range(-2021, -1873) %}
+                            <option class="date_rate">{{i*-1}}</option>
+                        {% endfor %}
+                    </select>
+                    to
+                    <select name="release_date-max">
+                        <option value="" selected>-</option>
+                        {% for i in range(-2021, -1873) %}
+                            <option class="date_rate">{{i*-1}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="rating">
+                <div class="label">
+                    <h3>User Rating</h3>
+                </div>
+                <div class="inputs">
+                    <select name="user_rating-min">
+                        <option value="" selected>-</option>
+                        {% for i in range(-100, -9) %}
+                            <option class="date_rate">{{i/-10}}</option>
+                        {% endfor %}
+                    </select>
+                    to
+                    <select name="user_rating-max">
+                        <option value="" selected>-</option>
+                        {% for i in range(-100, -9) %}
+                            <option class="date_rate">{{i/-10}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="clause">
+                <div class="label">
+                    <h3>Title Groups</h3>
+                </div>
+                <div class="inputs">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><input id="groups-2" type="checkbox" name="groups" value="top_250"> <label for="groups-2">IMDb "Top 250"</label></td>
+                                <td><input id="groups-4" type="checkbox" name="groups" value="oscar_winners"> <label for="groups-4">Oscar-Winning</label></td>
+                                <td><input id="groups-5" type="checkbox" name="groups" value="emmy_winners"> <label for="groups-5">Emmy Award-Winning</label></td>
+                                <td><input id="groups-6" type="checkbox" name="groups" value="golden_globe_winners"> <label for="groups-6">Golden Globe-Winning</label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="clause">
+                <div class="label">
+                    <h3>Runtime</h3>
+                </div>
+                <div class="inputs">
+                    <input name="runtime-min" autocomplete="off" placeholder="Minutes" type="number" size="3"> to <input name="runtime-max" autocomplete="off" placeholder="Minutes" type="number" size="3">
+                </div>
+            </div>
+            <footer>
+                <button class="btn btn-dark" name="page" value="result" id="myBtn2" type="submit">Search</button>
+                <button class="btn btn-dark" name="page" value="lucky" id="myBtn1" type="submit">Lucky</button>
+            </footer>
+        </div> 
+        <!--<script>
+             document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById("myBtn").addEventListener("click", function() {
+                    window.location.href = "/lucky.html";
+                    })
+                })
+        </script>
+        <script>
+             document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById("myBtn").addEventListener("click", function() {
+                    window.location.href = "/result.html";
+                    })
+                })
+        </script>-->   
+
+    </form>
+{% endblock %}

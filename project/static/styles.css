@@ -1,0 +1,111 @@
+html, body {
+  height: 100%;
+  text-align: center;
+}
+
+
+img {
+  height: 30%;
+  width: 30%;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bg { 
+  background: url("deer.jpg") no-repeat center center fixed; 
+  background-size: cover;
+  padding: 20px;
+  animation: fadeIn 4s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.inputs, p, td, option, .label {
+  color: #cfe6ff;
+}
+
+.btn-dark {
+  background-color: #2d4560;
+  border-color: #2d4560;
+}
+
+.btn-dark:hover {
+  border-color: #2b6fb3;
+}
+
+form {
+  text-align: left;
+}
+
+.leftside {
+
+  width: 50%;
+  float: left;
+  padding-left: 10%;
+}
+
+.rightside {
+
+  width: 50%;
+  float: left;
+  padding: inherit;
+}
+
+.title, .titlel {
+  font-size: large;
+}
+
+.date, .rating {
+  display: inline-block;
+}
+
+.rating {
+  padding-left: 10%;
+}
+
+.btn {
+  margin-top: 5%;
+}
+
+.result, .resultl {
+  border-style: groove;
+  border-color: transparent;
+  background-color: black;
+  opacity: 0.65;
+  border-radius: 8px;
+  margin-right: 25%;
+  margin-left: 25%;
+  margin-bottom: 1%;
+  padding-left: 3%;
+  padding-right: 3%;  
+  padding-top: 0.1%;
+}
+
+.result:hover, .resultl:hover {
+  border-color: dimgray;
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+.date_rate {
+  color: black;
+}
+
+.nothing {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -35%;
+  width: 100%;
+}
+
+.dio {
+  background: url("dio.jpg") no-repeat center center fixed; 
+  background-size: cover;
+  padding: 20px;
+}
+

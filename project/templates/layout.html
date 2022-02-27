@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- http://getbootstrap.com/docs/4.5/ -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <!-- https://favicon.io/emoji-favicons/money-mouth-face/ -->
+        <link href="/static/favicon.png" rel="icon">
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <!-- http://getbootstrap.com/docs/4.5/ -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        <!--I learned this technique from this educational video: https://www.youtube.com/watch?v=NTqmimXu1XM-->
+        <!--<script>
+            function changeBg() {
+                
+                const images = [
+                    'url("static/1.jpg")',
+                    'url("static/2.jpg")',
+                    'url("static/3.jpg")',
+                    'url("static/4.jpg")',
+                    'url("static/5.jpg")',
+                    'url("static/6.jpg")',
+                    'url("static/7.jpg")',
+                    'url("static/8.jpg")',
+                    'url("static/9.jpg")',
+                    'url("static/10.jpg")',
+                    'url("static/11.jpg")',
+                    'url("static/12.jpg")',
+                    'url("static/13.jpg")',
+                    'url("static/14.jpg")',
+                ]
+
+                const body = document.querySelector('body')
+                
+                const bgs = images[Math.floor(Math.random() * images.length)];
+                    body.style.backgroundImage = bgs;
+            }
+
+            setInterval(changeBg, 3000)
+        </script>-->
+
+        <title>Jomo's {% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body class="bg">
+        <header>
+            <a href="/"><img src="static/logo_transparent.png" alt="logo"></a>
+        </header>
+    	<main>
+            {% block body %}{% endblock %}
+        </main>
+    </body>
+
+</html>
+
+
